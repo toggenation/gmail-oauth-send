@@ -339,7 +339,6 @@ return [
      * Configures logging options
      */
     'Log' => [
-        
         'debug' => [
             'className' => FileLog::class,
             'path' => LOGS,
@@ -364,7 +363,6 @@ return [
             'url' => env('LOG_QUERIES_URL', null),
             'scopes' => ['cake.database.queries'],
         ],
-     
     ],
 
     /*
@@ -408,5 +406,6 @@ return [
      */
     'Session' => [
         'defaults' => 'php',
+        'cookie' => env('SESSION_COOKIE_NAME', 'PHPSESSID')
     ],
 ];
